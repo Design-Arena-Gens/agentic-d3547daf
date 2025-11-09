@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color: #0a0a0a; }
+:root { --bg: #0b0f15; --panel: #121826; --muted: #2a3444; --accent: #3b82f6; --text: #e5e7eb; --subtext: #9ca3af; }
+.fullscreen { height: 100vh; display: grid; grid-template-rows: 56px 1fr; background: var(--bg); color: var(--text); }
+.topbar { display:flex; align-items:center; gap:12px; padding: 8px 12px; background: #0d1422; border-bottom: 1px solid #1f2937; }
+.app-title { font-weight: 700; letter-spacing: 0.2px; }
+.row { display:flex; align-items:center; }
+.spacer { flex:1; }
+.btn { background: var(--panel); color: var(--text); border: 1px solid #263043; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.btn:hover { border-color: var(--muted); }
+.badge { background:#111827; border:1px solid #1f2937; padding:4px 8px; border-radius:6px; color:#d1d5db; }
+.main { display:grid; grid-template-columns: 260px 1fr 300px; height: calc(100vh - 56px); }
+.sidebar, .rightbar { background: var(--panel); border-right: 1px solid #1f2937; }
+.rightbar { border-left: 1px solid #1f2937; border-right:none; }
+.sidebar h3, .rightbar h3 { margin: 16px; color:#cbd5e1; }
+.list { padding: 8px; display:grid; grid-template-columns: 1fr; gap:8px; }
+.card { background:#0f172a; border:1px solid #1f2937; border-radius:10px; padding:10px; cursor: grab; }
+.card:hover { border-color:#334155; }
+.canvas-wrap { position: relative; background:#0a0f1a; }
+.toolbar { position:absolute; top:12px; left:12px; display:flex; gap:8px; }
+.canvas { width: 100%; height: 100%; }
+.grid line { stroke: #101826; stroke-width: 1; }
+.grid path { stroke: #101826; }
+.layer-toggle { display:flex; gap:6px; }
+.prop { padding: 8px 16px; border-top:1px solid #1f2937; color:#cbd5e1; }
+.input, select { background:#0b1220; border:1px solid #202a3c; color:#e5e7eb; border-radius:8px; padding:6px 8px; }
+.pad { pointer-events: all; }
+.selection-box { fill: rgba(59,130,246,0.08); stroke: rgba(59,130,246,0.5); stroke-dasharray: 4 3; }
